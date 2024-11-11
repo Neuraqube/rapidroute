@@ -29,6 +29,8 @@
   },
   "homepage": "https://github.com/coolboyalan/rapidroute#readme",
   "dependencies": {
+    "dotenv": "^16.4.5",
+    "envalid": "^8.0.0",
     "express": "^4.21.1"
   }
 }
