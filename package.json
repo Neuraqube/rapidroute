@@ -1,0 +1,34 @@
+{
+  "name": "rapidroute",
+  "version": "0.0.1",
+  "description": "When Express isn't fast enough, RapidRoute takes your performance to the next level—blazing-fast routing and seamless scalability.",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "npx nodemon src/index.js"
+  },
+  "imports": {
+    "#models/*": "./src/models/*.model.js",
+    "#controllers/*": "./src/controllers/*.controller.js",
+    "#middlewares/*": "./src/middlewares/*.middleware.js",
+    "#utils/*": "./src/utils/*.util.js",
+    "#configs/*": "./src/config/*.config.js",
+    "#validations/*": "./src/validations/*.validation.js",
+    "#routes/*": "./src/routes/*.route.js",
+    "#root/*": "./*"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/coolboyalan/rapidroute.git"
+  },
+  "author": "The RapidRoute Team",
+  "license": "GPL-3.0",
+  "bugs": {
+    "url": "https://github.com/coolboyalan/rapidroute/issues"
+  },
+  "homepage": "https://github.com/coolboyalan/rapidroute#readme",
+  "dependencies": {
+    "express": "^4.21.1"
+  }
+}
