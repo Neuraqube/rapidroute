@@ -1,3 +1,4 @@
+⚠️ **This project is under active development. The current release is not functional and should not be used in production.**
 
 # RapidRoute: A Modern Express Framework for Effortless Backend Development
 
