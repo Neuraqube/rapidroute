@@ -1,0 +1,51 @@
+{
+  "compilerOptions": {
+    /* Basic Options */
+    "target": "ES2020", // Specify ECMAScript target version
+    "module": "ESNext", // Use ES Modules
+    "lib": ["ES2020"], // Include standard library declarations
+    "moduleResolution": "Node", // Resolve modules like Node.js
+    "rootDir": "./src", // Root folder for source files
+    "outDir": "./dist", // Output folder for compiled files
+
+    /* Strict Type-Checking Options */
+    "strict": true, // Enable all strict type-checking options
+    "noImplicitAny": true, // Raise errors on implicit `any`
+    "strictNullChecks": true, // Enable strict null checking
+    "strictPropertyInitialization": true, // Ensure class properties are initialized
+
+    /* Code Quality Options */
+    "noUnusedLocals": true, // Report unused local variables
+    "noUnusedParameters": true, // Report unused function parameters
+    "noImplicitReturns": true, // Ensure functions return explicitly
+    "noFallthroughCasesInSwitch": true, // Disallow fallthrough in switch statements
+
+    /* Advanced Options */
+    "resolveJsonModule": true, // Allow importing `.json` files
+    "esModuleInterop": true, // Enable interoperation between CommonJS and ES Modules
+    "allowSyntheticDefaultImports": true, // Allow default imports for modules without them
+    "skipLibCheck": true, // Skip checking declaration files
+    "forceConsistentCasingInFileNames": true, // Enforce consistent file naming
+
+    /* Source Map Options */
+    "sourceMap": true, // Generate `.map` files for debugging
+    "inlineSourceMap": false, // Embed source map inline in output files
+    "inlineSources": true, // Include source code in source maps
+
+    /* Type Checking */
+    "typeRoots": ["./node_modules/@types"], // Paths to type definitions
+    "baseUrl": ".", // Base directory for resolving paths
+    "paths": {
+      // Path mappings
+      "@/*": ["src/*"]
+    },
+
+    /* Emit Options */
+    "declaration": true, // Generate `.d.ts` declaration files
+    "declarationMap": true, // Generate maps for declaration files
+    "emitDecoratorMetadata": true, // Emit metadata for decorators
+    "experimentalDecorators": true // Enable experimental support for decorators
+  },
+  "include": ["src/**/*"], // Include all source files
+  "exclude": ["node_modules", "dist"] // Exclude unnecessary files
+}

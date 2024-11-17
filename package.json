@@ -1,13 +1,22 @@
 {
   "name": "rapidroute",
-  "version": "0.0.1a",
+  "version": "0.0.1b - alpha",
   "description": "When Express isn't fast enough, RapidRoute takes your performance to the next level—blazing-fast routing and seamless scalability.",
   "main": "index.js",
   "type": "module",
   "scripts": {
     "start": "ts-node src/index.ts",
     "build": "tsc",
-    "serve": "node dist/index.js"
+    "serve": "node dist/index.js",
+    "dev": "npx nodemon src/index.js"
+  },
+  "imports": {
+    "#utils/*": "./src/utils/*.util.js",
+    "#routes/*": "./src/routes/*.route.js",
+    "#controllers/*": "./src/controllers/*.controller.js",
+    "#services/*": "./src/services/*.service.js",
+    "#configs/*": "./src/configs/*.config.js",
+    "#models/*": "./src/models/*.model.js"
   },
   "repository": {
     "type": "git",
@@ -23,10 +32,5 @@
     "dotenv": "^16.4.5",
     "envalid": "^8.0.0",
     "express": "^4.21.1"
-  },
-  "devDependencies": {
-    "@types/express": "^5.0.0",
-    "@types/node": "^22.9.0",
-    "typescript": "^5.6.3"
   }
 }
