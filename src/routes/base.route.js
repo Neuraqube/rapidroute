@@ -1,4 +1,6 @@
 import express from 'express';
+import schemaValidator from '#middlewares/validation'
+import validationSchemaGenerator from '#utils/validation'
 
 class Router {
   constructor(controller) {
@@ -11,11 +13,14 @@ class Router {
     const controller = this.controller;
     const router = this.router;
 
+    const model = controller.service.model;
+    const schema = validationSchemaGenerator(model);
+
     router
       .route('/:id?')
       .get(controller.get)
-      .post(controller.create)
-      .put(controller.update)
+      .post(schemaValidator(schema),controller.create)
+      .put(schemaValidator,controller.update)
       .delete(controller.delete);
   }
 }

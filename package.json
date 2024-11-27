@@ -16,7 +16,9 @@
     "#controllers/*": "./src/controllers/*.controller.js",
     "#services/*": "./src/services/*.service.js",
     "#configs/*": "./src/configs/*.config.js",
-    "#models/*": "./src/models/*.model.js"
+    "#models/*": "./src/models/*.model.js",
+    "#middlewares/*": "./src/middlewares/*.middleware.js",
+    "#root/*": "./*"
   },
   "repository": {
     "type": "git",
@@ -31,6 +33,10 @@
   "dependencies": {
     "dotenv": "^16.4.5",
     "envalid": "^8.0.0",
-    "express": "^4.21.1"
+    "express": "^4.21.1",
+    "joi": "^17.13.3",
+    "pg": "^8.13.1",
+    "sequelize": "^6.37.5",
+    "swagger-ui-express": "^5.0.1"
   }
 }
