@@ -1,5 +1,5 @@
-import { sendResponse } from '#utils/response';
-import status from '#utils/httpStatus';
+import { sendResponse } from "#utils/response";
+import status from "#utils/httpStatus";
 
 class Controller {
   constructor(service) {
@@ -9,7 +9,7 @@ class Controller {
     const { id } = req.params;
     const filter = req.query;
     const data = await this.service.get(id, filter);
-    sendResponse(status.OK, res, data,'Record fetched successfully');
+    sendResponse(status.OK, res, data, "Record fetched successfully");
   };
   create = async (req, res, next) => {
     const data = req.body;
@@ -18,19 +18,19 @@ class Controller {
       status.CREATED,
       res,
       createdData,
-      'Record created successfully'
+      "Record created successfully",
     );
   };
   update = async (req, res, next) => {
     const { id } = req.params;
     const data = req.body;
     const updatedData = await this.service.update(id, data);
-    sendResponse(status.OK, res, updatedData, 'Record updated successfully');
+    sendResponse(status.OK, res, updatedData, "Record updated successfully");
   };
   delete = async (req, res, next) => {
     const { id } = req.params;
     await this.service.delete(id);
-    sendResponse(status.NO_CONTENT, res, null, 'Record deleted successfully');
+    sendResponse(status.NO_CONTENT, res, null, "Record deleted successfully");
   };
 }
 

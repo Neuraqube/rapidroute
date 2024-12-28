@@ -1,5 +1,5 @@
-import UserModel from '#models/base';
-import Service from '#services/base';
+import UserModel from "#models/user";
+import Service from "#services/base";
 
 class UserService extends Service {}
 

@@ -5,14 +5,14 @@ class Service {
 
   async get(id, filter = {}) {
     if (!id) {
-      const data = await this.model.findAllRecords(filter);
+      const data = await this.model.find(filter);
       return data;
     }
     const data = await this.model.findById(id);
     return data;
   }
   async getDeletedRecords(filter) {
-    const data = await model.findAllRecords();
+    const data = await model.find();
     return data;
   }
   async create(data) {

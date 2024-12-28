@@ -1,0 +1,12 @@
+import { configDotenv } from "dotenv";
+import { str, num, cleanEnv } from "envalid";
+
+configDotenv();
+
+const env = cleanEnv(process.env, {
+  DB_NAME: str(),
+  DB_URL: str(),
+  NODE_ENV: str({ default: "development" }),
+});
+
+export default env;

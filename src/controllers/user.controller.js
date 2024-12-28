@@ -1,5 +1,5 @@
-import { userServiceInstance } from '#services/user';
-import Controller from '#controllers/base';
+import { userServiceInstance } from "#services/user";
+import Controller from "#controllers/base";
 
 class UserController extends Controller {}
 
