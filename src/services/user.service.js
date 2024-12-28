@@ -1,8 +1,12 @@
 import UserModel from "#models/user";
 import Service from "#services/base";
 
-class UserService extends Service {}
+class UserService extends Service {
+  findSafe = async () => {
+    return this.model.find();
+  };
+}
 
-export const userServiceInstance = new UserService(UserModel);
+const userService = new UserService(UserModel);
 
-export default UserService;
+export default userService;

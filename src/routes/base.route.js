@@ -1,18 +1,15 @@
-import express from 'express';
-
-class Router {
-  constructor(controller) {
+class BaseRouter {
+  constructor(router, controller) {
     this.controller = controller;
-    this.router = express.Router();
-    this.use();
+    this.router = router;
   }
-  
+
   use() {
     const controller = this.controller;
     const router = this.router;
 
     router
-      .route('/:id?')
+      .route("/:id?")
       .get(controller.get)
       .post(controller.create)
       .put(controller.update)
@@ -20,4 +17,4 @@ class Router {
   }
 }
 
-export default Router;
+export default BaseRouter;
